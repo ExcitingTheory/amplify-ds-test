@@ -8,12 +8,18 @@ import {
   CreateTodoInput,
   CreateTodoMutation,
   ListTodosQuery,
-  Todo,
+  // Todo,
 } from '../API'
 import { GRAPHQL_AUTH_MODE } from '@aws-amplify/api'
 import { useRouter } from 'next/router'
 import { GetServerSideProps } from 'next'
 import styles from '../styles/Home.module.css'
+
+import { serializeModel } from '@aws-amplify/datastore/ssr';
+import { 
+  Todo
+} from "../models";
+
 
 Amplify.configure({ ...awsExports, ssr: true })
 
@@ -105,14 +111,14 @@ export default function Home({ todos = [] }: { todos: Todo[] }) {
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const SSR = withSSRContext({ req })
-
-  const response = (await SSR.API.graphql({ query: listTodos })) as {
-    data: ListTodosQuery
-  }
+  const todos = await SSR.DataStore.query(Todo);
 
   return {
     props: {
-      todos: response.data.listTodos.items,
+      todos: serializeModel(todos),
     },
-  }
+  };
+
 }
+
+

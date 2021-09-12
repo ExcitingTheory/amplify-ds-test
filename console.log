@@ -1,0 +1,111 @@
+window.LOG_LEVEL = 'DEBUG';
+
+'DEBUG'
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.844 Amplify - component registered in amplify CredentialsClass {_gettingCredPromise: null, _refreshHandlers: {…}, Auth: undefined}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.844 RestAPI - API Options undefined
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.845 GraphQLAPI - API Options undefined
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.845 API - API Options undefined
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.845 Amplify - component registered in amplify APIClass {Auth: AuthClass, Cache: BrowserStorageCacheClass, Credentials: CredentialsClass, _options: undefined, _restApi: RestAPIClass, …}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.846 RestAPI - configure Rest API {opt: {…}}
+ConsoleLogger.js?36de:127 [DEBUG] 09:19.846 RestAPI - create Rest API instance
+​ [DEBUG] 09:19.846 RestClient - API Options {endpoints: Array(0)}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.847 GraphQLAPI - configure GraphQL API {opt: {…}}
+ConsoleLogger.js?36de:127 [DEBUG] 09:19.847 GraphQLAPI - create Rest instance
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.847 RestClient - API Options {}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.848 Amplify - component registered in amplify AuthClass {userPool: null, user: null, oAuthFlowInProgress: false, Credentials: CredentialsClass, wrapRefreshSessionCallback: ƒ, …}
+ConsoleLogger.js?36de:127 [DEBUG] 09:19.848 AuthClass - configure Auth
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.848 Parser - parse config (3) [{…}, 'to amplifyconfig', {…}]
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.849 Hub - Dispatching to auth with  {event: 'configured', data: null, message: 'The Auth category has been configured successfully'}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.849 Hub - Dispatching to auth with  {event: 'configured', data: null, message: 'The Auth category has been configured successfully'}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.850 AnalyticsClass - on hub capsule auth {event: 'configured', data: null, message: 'The Auth category has been configured successfully'}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.850 Hub - Dispatching to auth with  {event: 'configured', data: null, message: 'The Auth category has been configured successfully'}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.850 Amplify - component registered in amplify DataStore {amplifyConfig: {…}, syncPredicates: WeakMap, start: ƒ, query: ƒ, save: ƒ, …}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.850 Amplify - amplify config {aws_project_region: 'us-east-1', aws_cognito_identity_pool_id: 'us-east-1:3d0c87a4-0668-4ba9-bc73-ca4f436af53c', aws_cognito_region: 'us-east-1', aws_user_pools_id: 'us-east-1_Ruf5xAieG', aws_user_pools_web_client_id: '73lvdn2e6eetltetqda5sk56de', …}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.851 RestAPI - configure Rest API {opt: {…}}
+ConsoleLogger.js?36de:127 [DEBUG] 09:19.851 RestAPI - create Rest API instance
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.851 RestClient - API Options {endpoints: Array(0), aws_project_region: 'us-east-1', aws_cognito_identity_pool_id: 'us-east-1:3d0c87a4-0668-4ba9-bc73-ca4f436af53c', aws_cognito_region: 'us-east-1', aws_user_pools_id: 'us-east-1_Ruf5xAieG', …}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.852 GraphQLAPI - configure GraphQL API {opt: {…}}
+ConsoleLogger.js?36de:127 [DEBUG] 09:19.852 GraphQLAPI - create Rest instance
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.852 RestClient - API Options {aws_project_region: 'us-east-1', aws_cognito_identity_pool_id: 'us-east-1:3d0c87a4-0668-4ba9-bc73-ca4f436af53c', aws_cognito_region: 'us-east-1', aws_user_pools_id: 'us-east-1_Ruf5xAieG', aws_user_pools_web_client_id: '73lvdn2e6eetltetqda5sk56de', …}
+ConsoleLogger.js?36de:127 [DEBUG] 09:19.852 AuthClass - configure Auth
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.853 Parser - parse config (3) [{…}, 'to amplifyconfig', {…}]
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.853 Hub - Dispatching to auth with  {event: 'configured', data: null, message: 'The Auth category has been configured successfully'}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.853 Hub - Dispatching to auth with  {event: 'configured', data: null, message: 'The Auth category has been configured successfully'}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.854 AnalyticsClass - on hub capsule auth {event: 'configured', data: null, message: 'The Auth category has been configured successfully'}
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.854 Hub - Dispatching to auth with  {event: 'configured', data: null, message: 'The Auth category has been configured successfully'}
+ConsoleLogger.js?36de:127 [DEBUG] 09:19.855 DataStore - Starting DataStore
+ConsoleLogger.js?36de:127 [DEBUG] 09:19.856 DataStore - Starting Storage
+ConsoleLogger.js?36de:139 [DEBUG] 09:19.923 DataStore - GraphQL endpoint available https://4fpnoaormng5rkuv2mntpohnnu.appsync-api.us-east-1.amazonaws.com/graphql
+ConsoleLogger.js?36de:127 [INFO] 09:19.924 DataStore - starting sync engine...
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.7 AuthClass - getting current credentials
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.7 Credentials - getting credentials
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.7 Credentials - picking up credentials
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.7 Credentials - getting new cred promise
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.8 Credentials - checking if credentials exists and not expired
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.8 Credentials - need to get a new credential or refresh the existing one
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.8 Credentials - no credentials for expiration check
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.9 AuthClass - Getting current user credentials
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.10 AuthClass - Getting current session
+​ [DEBUG] 09:20.14 AuthClass - Getting the session from this user: CognitoUser {username: 'colin', pool: CognitoUserPool, Session: null, client: Client, signInUserSession: CognitoUserSession, …}
+​ [DEBUG] 09:20.14 AuthClass - Succeed to get the user session CognitoUserSession {idToken: CognitoIdToken, refreshToken: CognitoRefreshToken, accessToken: CognitoAccessToken, clockDrift: 0}
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.15 AuthClass - getting session success CognitoUserSession {idToken: CognitoIdToken, refreshToken: CognitoRefreshToken, accessToken: CognitoAccessToken, clockDrift: 0}
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.15 Credentials - set credentials from session
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.15 Credentials - No Cognito Federated Identity pool provided
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.15 AuthClass - getting session failed No Cognito Federated Identity pool provided
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.16 Credentials - setting credentials for guest
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.16 Credentials - No Cognito Identity pool provided for unauthenticated access
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.16 AuthClass - Getting current session
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.17 AuthClass - Getting the session from this user: CognitoUser {username: 'colin', pool: CognitoUserPool, Session: null, client: Client, signInUserSession: CognitoUserSession, …}
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.17 AuthClass - Succeed to get the user session CognitoUserSession {idToken: CognitoIdToken, refreshToken: CognitoRefreshToken, accessToken: CognitoAccessToken, clockDrift: 0}
+ConsoleLogger.js?36de:127 [INFO] 09:20.18 Cache - Get item: key is federatedInfo with options undefined
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.18 AuthClass - getting current authenticated user
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.19 AuthClass - get current authenticated userpool user
+ConsoleLogger.js?36de:127 [INFO] 09:20.22 DataStore - Realtime ready
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.24 DataStore - Attempting Create subscription with authMode: API_KEY
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.26 PubSub - subscribe options {provider: Symbol(INTERNAL_AWS_APPSYNC_REALTIME_PUBSUB_PROVIDER), appSyncGraphqlEndpoint: 'https://4fpnoaormng5rkuv2mntpohnnu.appsync-api.us-east-1.amazonaws.com/graphql', authenticationType: 'API_KEY', apiKey: 'da2-x2dv5jd7fvb6nidpx2gnltuylu', query: 'subscription operation {\n  onCreateTodo {\n    id\n …  _version\n    _lastChangedAt\n    _deleted\n  }\n}\n', …}
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.29 DataStore - Attempting Update subscription with authMode: API_KEY
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.30 PubSub - subscribe options {provider: Symbol(INTERNAL_AWS_APPSYNC_REALTIME_PUBSUB_PROVIDER), appSyncGraphqlEndpoint: 'https://4fpnoaormng5rkuv2mntpohnnu.appsync-api.us-east-1.amazonaws.com/graphql', authenticationType: 'API_KEY', apiKey: 'da2-x2dv5jd7fvb6nidpx2gnltuylu', query: 'subscription operation {\n  onUpdateTodo {\n    id\n …  _version\n    _lastChangedAt\n    _deleted\n  }\n}\n', …}
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.31 DataStore - Attempting Delete subscription with authMode: API_KEY
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.31 PubSub - subscribe options {provider: Symbol(INTERNAL_AWS_APPSYNC_REALTIME_PUBSUB_PROVIDER), appSyncGraphqlEndpoint: 'https://4fpnoaormng5rkuv2mntpohnnu.appsync-api.us-east-1.amazonaws.com/graphql', authenticationType: 'API_KEY', apiKey: 'da2-x2dv5jd7fvb6nidpx2gnltuylu', query: 'subscription operation {\n  onDeleteTodo {\n    id\n …  _version\n    _lastChangedAt\n    _deleted\n  }\n}\n', …}
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.33 AWSAppSyncRealTimeProvider - Initializaling retryable Handshake
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.34 Util - bound  attempt #1 with this vars: [{"awsRealTimeUrl":"wss://4fpnoaormng5rkuv2mntpohnnu.appsync-realtime-api.us-east-1.amazonaws.com/graphql?header=eyJob3N0IjoiNGZwbm9hb3Jtbmc1cmt1djJtbnRwb2hubnUuYXBwc3luYy1hcGkudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20iLCJ4LWFtei1kYXRlIjoiMjAyMTA5MTJUMjIwOTIwWiIsIngtYXBpLWtleSI6ImRhMi14MmR2NWpkN2Z2YjZuaWRweDJnbmx0dXlsdSJ9&payload=e30="}]
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.34 AWSAppSyncRealTimeProvider - Initializing handshake wss://4fpnoaormng5rkuv2mntpohnnu.appsync-realtime-api.us-east-1.amazonaws.com/graphql?header=eyJob3N0IjoiNGZwbm9hb3Jtbmc1cmt1djJtbnRwb2hubnUuYXBwc3luYy1hcGkudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20iLCJ4LWFtei1kYXRlIjoiMjAyMTA5MTJUMjIwOTIwWiIsIngtYXBpLWtleSI6ImRhMi14MmR2NWpkN2Z2YjZuaWRweDJnbmx0dXlsdSJ9&payload=e30=
+.tsx?384d:32 deleted Model {id: '38ee4585-78d0-4971-8b3c-68a371cb2963', name: 'Today, 1:04:28 PM', description: 'I built an Amplify app with Next.js!', _version: 1, _deleted: null, …}
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.46 DataStore - Attempting sync with authMode: API_KEY
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.47 Util -  attempt #1 with this vars: ["query operation($limit: Int, $nextToken: String, $lastSync: AWSTimestamp, $filter: ModelTodoFilterInput){\n\t\tsyncTodos(limit: $limit, nextToken: $nextToken, lastSync: $lastSync, filter: $filter){\n\t\t\titems {\n\t\t\t\t\t\t\tid\nname\ndescription\ncreatedAt\nupdatedAt\nowner\n_version\n_lastChangedAt\n_deleted\n\t\t\t\t\t\t}\n\t\t\t\t\t\tnextToken\n\t\t\t\t\t\tstartedAt\n\t\t}\n\t}",{"limit":1000,"nextToken":null,"lastSync":1631484096356,"filter":null}]
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.50 RestClient - POST https://4fpnoaormng5rkuv2mntpohnnu.appsync-api.us-east-1.amazonaws.com/graphql
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.467 DataStore - Sync successful with authMode: API_KEY
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.495 DataStore - Next fullSync in 71682.611 seconds. (Mon Sep 13 2021 11:04:03 GMT-0700 (Pacific Daylight Time))
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.497 DataStore - Attempting mutation with authMode: API_KEY
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.497 Util -  attempt #1 with this vars: ["Todo","Delete","{\"id\":\"38ee4585-78d0-4971-8b3c-68a371cb2963\",\"name\":\"Today, 1:04:28 PM\",\"description\":\"I built an Amplify app with Next.js!\",\"_version\":1,\"_deleted\":null,\"_lastChangedAt\":1631477072507,\"createdAt\":\"2021-09-12T20:04:32.483Z\",\"updatedAt\":\"2021-09-12T20:04:32.483Z\",\"owner\":\"colin\"}","{}",null,null,{"data":"{\"id\":\"38ee4585-78d0-4971-8b3c-68a371cb2963\",\"name\":\"Today, 1:04:28 PM\",\"description\":\"I built an Amplify app with Next.js!\",\"_version\":1,\"_deleted\":null,\"_lastChangedAt\":1631477072507,\"createdAt\":\"2021-09-12T20:04:32.483Z\",\"updatedAt\":\"2021-09-12T20:04:32.483Z\",\"owner\":\"colin\"}","modelId":"38ee4585-78d0-4971-8b3c-68a371cb2963","model":"Todo","operation":"Delete","condition":"{}","id":"01FFE0X66HPXE1D68DCQ7R1K6B"}]
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.498 RestClient - POST https://4fpnoaormng5rkuv2mntpohnnu.appsync-api.us-east-1.amazonaws.com/graphql
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.677 AWSAppSyncRealTimeProvider - subscription message from AWS AppSyncRealTime: {"type":"connection_ack","payload":{"connectionTimeoutMs":300000}} 
+3ConsoleLogger.js?36de:127 [DEBUG] 09:20.677 AWSAppSyncRealTimeProvider - Notifying connection successful
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.678 AWSAppSyncRealTimeProvider - subscription message from AWS AppSync RealTime: {"type":"ka"}
+ConsoleLogger.js?36de:131 [DEBUG] 09:20.678 AWSAppSyncRealTimeProvider {id: '', observer: null, query: '', variables: {…}}
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.920 AWSAppSyncRealTimeProvider - subscription message from AWS AppSync RealTime: {"id":"abd10f74-2184-43f9-92c9-a81eec3ad9bb","type":"start_ack"}
+ConsoleLogger.js?36de:131 [DEBUG] 09:20.920 AWSAppSyncRealTimeProvider {id: 'abd10f74-2184-43f9-92c9-a81eec3ad9bb', observer: SubscriptionObserver, query: 'subscription operation {\n  onCreateTodo {\n    id\n …  _version\n    _lastChangedAt\n    _deleted\n  }\n}\n', variables: {…}}
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.920 AWSAppSyncRealTimeProvider - subscription ready for {"query":"subscription operation {\n  onCreateTodo {\n    id\n    name\n    description\n    createdAt\n    updatedAt\n    owner\n    _version\n    _lastChangedAt\n    _deleted\n  }\n}\n","variables":{}}
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.921 Hub - Dispatching to api with  {event: 'Subscription ack', data: {…}, message: 'Connection established for subscription'}
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.921 Hub - Dispatching to api with  {event: 'Subscription ack', data: {…}, message: 'Connection established for subscription'}
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.921 Hub - Dispatching to api with  {event: 'Subscription ack', data: {…}, message: 'Connection established for subscription'}
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.923 Util - error on  Error: Unauthorized
+    at new NonRetryableError (Retry.js?dae4:75)
+    at MutationProcessor.eval (mutation.js?e711:320)
+    at step (mutation.js?e711:43)
+    at Object.eval [as throw] (mutation.js?e711:24)
+    at rejected (mutation.js?e711:16)
+ConsoleLogger.js?36de:139 [DEBUG] 09:20.923 Util -  non retryable error Error: Unauthorized
+    at new NonRetryableError (Retry.js?dae4:75)
+    at MutationProcessor.eval (mutation.js?e711:320)
+    at step (mutation.js?e711:43)
+    at Object.eval [as throw] (mutation.js?e711:24)
+    at rejected (mutation.js?e711:16)
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.923 DataStore - Mutation failed with authMode: API_KEY
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.924 DataStore - done retrying
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.925 AWSAppSyncRealTimeProvider - subscription message from AWS AppSync RealTime: {"id":"3fe251a8-081a-4158-a620-514691c7c1db","type":"start_ack"}
+ConsoleLogger.js?36de:131 [DEBUG] 09:20.925 AWSAppSyncRealTimeProvider {id: '3fe251a8-081a-4158-a620-514691c7c1db', observer: SubscriptionObserver, query: 'subscription operation {\n  onDeleteTodo {\n    id\n …  _version\n    _lastChangedAt\n    _deleted\n  }\n}\n', variables: {…}}
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.925 AWSAppSyncRealTimeProvider - subscription ready for {"query":"subscription operation {\n  onDeleteTodo {\n    id\n    name\n    description\n    createdAt\n    updatedAt\n    owner\n    _version\n    _lastChangedAt\n    _deleted\n  }\n}\n","variables":{}}
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.926 AWSAppSyncRealTimeProvider - subscription message from AWS AppSync RealTime: {"id":"f6f4f1c8-6964-4f6a-a779-b086de3164aa","type":"start_ack"}
+ConsoleLogger.js?36de:131 [DEBUG] 09:20.926 AWSAppSyncRealTimeProvider {id: 'f6f4f1c8-6964-4f6a-a779-b086de3164aa', observer: SubscriptionObserver, query: 'subscription operation {\n  onUpdateTodo {\n    id\n …  _version\n    _lastChangedAt\n    _deleted\n  }\n}\n', variables: {…}}
+ConsoleLogger.js?36de:127 [DEBUG] 09:20.926 AWSAppSyncRealTimeProvider - subscription ready for {"query":"subscription operation {\n  onUpdateTodo {\n    id\n    name\n    description\n    createdAt\n    updatedAt\n    owner\n    _version\n    _lastChangedAt\n    _deleted\n  }\n}\n","variables":{}}

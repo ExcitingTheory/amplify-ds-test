@@ -1,18 +1,22 @@
 import { Amplify, API, withSSRContext } from 'aws-amplify'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { DeleteTodoInput, GetTodoQuery, Todo, ListTodosQuery } from '../../API'
+import { DeleteTodoInput, GetTodoQuery, ListTodosQuery } from '../../API'
 import awsExports from '../../aws-exports'
 import { deleteTodo } from '../../graphql/mutations'
 import { getTodo, listTodos } from '../../graphql/queries'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { GRAPHQL_AUTH_MODE } from '@aws-amplify/api'
 import styles from '../../styles/Home.module.css'
+import { Todo } from '../../models'
+import { deserializeModel } from '@aws-amplify/datastore/ssr';
+import React, { useState } from 'react';
 
 Amplify.configure({ ...awsExports, ssr: true })
 
 export default function TodoPage({ todo }: { todo: Todo }) {
   const router = useRouter()
+  const [todoModel, setTodoModel] = useState(deserializeModel(Todo, todo));
 
   if (router.isFallback) {
     return (
@@ -21,11 +25,22 @@ export default function TodoPage({ todo }: { todo: Todo }) {
       </div>
     )
   }
+  async function handleDelete2(): Promise<void>  {
+    const SSR = withSSRContext()
+    try {
+      const deleted = await SSR.DataStore.delete(todoModel);
+      console.log('deleted', deleted)
+    } catch ({ errors }) {
+      console.error(...errors)
+      throw new Error(errors[0].message)
+    }
+  }
 
   async function handleDelete(): Promise<void> {
     try {
       const deleteInput: DeleteTodoInput = {
         id: todo.id,
+        _version: todo._version
       }
 
       await API.graphql({
@@ -56,8 +71,11 @@ export default function TodoPage({ todo }: { todo: Todo }) {
       </main>
 
       <footer>
-        <button className={styles.footer} onClick={handleDelete}>
-          💥 Delete todo
+      <button className={styles.footer} onClick={handleDelete}>
+          💥 Delete via Graphql
+        </button>
+        <button className={styles.footer} onClick={handleDelete2}>
+          💥 Delete via DataStore
         </button>
       </footer>
     </div>
