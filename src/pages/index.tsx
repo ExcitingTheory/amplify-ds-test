@@ -26,6 +26,26 @@ Amplify.configure({ ...awsExports, ssr: true })
 export default function Home({ todos = [] }: { todos: Todo[] }) {
   const router = useRouter()
 
+  async function handleCreateTodo2(event) {
+    event.preventDefault()
+    const SSR = withSSRContext()
+    const form = new FormData(event.target)
+
+    try {
+      const newTodo = await SSR.DataStore.save(
+        new Todo({
+          name: form.get('title').toString(),
+          description: form.get('content').toString()
+        })
+      );
+      console.log('newTodo', newTodo)
+      // router.push(`/todo/${newTodo.id}`)
+    } catch ({ errors }) {
+      console.error(...errors)
+      throw new Error(errors[0].message)
+    }
+  }
+
   async function handleCreateTodo(event) {
     event.preventDefault()
 
@@ -96,11 +116,38 @@ export default function Home({ todos = [] }: { todos: Todo[] }) {
                   />
                 </fieldset>
 
-                <button>Create Todo</button>
+                <button>Create Todo via Graphql</button>
                 <button type="button" onClick={() => Auth.signOut()}>
                   Sign out
                 </button>
               </form>
+
+
+
+              <form onSubmit={handleCreateTodo2}>
+                <fieldset>
+                  <legend>Title</legend>
+                  <input
+                    defaultValue={`Today, ${new Date().toLocaleTimeString()}`}
+                    name="title"
+                  />
+                </fieldset>
+
+                <fieldset>
+                  <legend>Content</legend>
+                  <textarea
+                    defaultValue="I built an Amplify app with Next.js!"
+                    name="content"
+                  />
+                </fieldset>
+
+                <button>Create Todo via DataStore</button>
+                <button type="button" onClick={() => Auth.signOut()}>
+                  Sign out
+                </button>
+              </form>
+
+
             </AmplifyAuthenticator>
           </div>
         </div>

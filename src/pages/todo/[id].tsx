@@ -9,7 +9,7 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import { GRAPHQL_AUTH_MODE } from '@aws-amplify/api'
 import styles from '../../styles/Home.module.css'
 import { Todo } from '../../models'
-import { deserializeModel } from '@aws-amplify/datastore/ssr';
+import { deserializeModel, serializeModel } from '@aws-amplify/datastore/ssr';
 import React, { useState } from 'react';
 
 Amplify.configure({ ...awsExports, ssr: true })
@@ -17,6 +17,9 @@ Amplify.configure({ ...awsExports, ssr: true })
 export default function TodoPage({ todo }: { todo: Todo }) {
   const router = useRouter()
   const [todoModel, setTodoModel] = useState(deserializeModel(Todo, todo));
+
+  console.log('todo', todo)
+  console.log('todoModel', todoModel)
 
   if (router.isFallback) {
     return (
@@ -30,6 +33,7 @@ export default function TodoPage({ todo }: { todo: Todo }) {
     try {
       const deleted = await SSR.DataStore.delete(todoModel);
       console.log('deleted', deleted)
+      // router.push(`/`)
     } catch ({ errors }) {
       console.error(...errors)
       throw new Error(errors[0].message)
@@ -66,6 +70,7 @@ export default function TodoPage({ todo }: { todo: Todo }) {
       </Head>
 
       <main className={styles.main}>
+        <a href='/'>Home</a>
         <h1 className={styles.title}>{todo.name}</h1>
         <p className={styles.description}>{todo.description}</p>
       </main>
@@ -85,12 +90,9 @@ export default function TodoPage({ todo }: { todo: Todo }) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const SSR = withSSRContext()
 
-  const todosQuery = (await SSR.API.graphql({
-    query: listTodos,
-    authMode: GRAPHQL_AUTH_MODE.API_KEY,
-  })) as { data: ListTodosQuery; errors: any[] }
+  const todos = await SSR.DataStore.query(Todo);
 
-  const paths = todosQuery.data.listTodos.items.map((todo: Todo) => ({
+  const paths = todos.map((todo: Todo) => ({
     params: { id: todo.id },
   }))
 
@@ -103,16 +105,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const SSR = withSSRContext()
 
-  const response = (await SSR.API.graphql({
-    query: getTodo,
-    variables: {
-      id: params.id,
-    },
-  })) as { data: GetTodoQuery }
+  const todo = await SSR.DataStore.query(Todo, params.id);
 
   return {
     props: {
-      todo: response.data.getTodo,
+      todo: serializeModel(todo),
     },
-  }
+  };
 }
