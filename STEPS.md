@@ -45,9 +45,9 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
 ? Please choose the profile you want to use default
 Adding backend environment dev to AWS Amplify Console app: d234bkb1pj1ocw```
 
-Add api like example except enable versioning
-
 ```
+
+Add api like example except enable versioning
 
 ```bash
 amplify add api
