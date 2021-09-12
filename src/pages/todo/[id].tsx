@@ -1,4 +1,4 @@
-import { Amplify, API, withSSRContext } from 'aws-amplify'
+import Amplify, { AuthModeStrategyType, API, withSSRContext } from 'aws-amplify';
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { DeleteTodoInput, GetTodoQuery, ListTodosQuery } from '../../API'
@@ -12,7 +12,13 @@ import { Todo } from '../../models'
 import { deserializeModel, serializeModel } from '@aws-amplify/datastore/ssr';
 import React, { useState } from 'react';
 
-Amplify.configure({ ...awsExports, ssr: true })
+// Amplify.configure({ ...awsExports, ssr: true })
+Amplify.configure({
+  ...awsExports,
+  DataStore: {
+    authModeStrategyType: AuthModeStrategyType.MULTI_AUTH
+  }
+})
 
 export default function TodoPage({ todo }: { todo: Todo }) {
   const router = useRouter()
@@ -33,7 +39,7 @@ export default function TodoPage({ todo }: { todo: Todo }) {
     try {
       const deleted = await SSR.DataStore.delete(todoModel);
       console.log('deleted', deleted)
-      // router.push(`/`)
+      router.push(`/`)
     } catch ({ errors }) {
       console.error(...errors)
       throw new Error(errors[0].message)

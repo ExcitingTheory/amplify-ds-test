@@ -1,5 +1,5 @@
 import { AmplifyAuthenticator } from '@aws-amplify/ui-react'
-import { Amplify, API, Auth, withSSRContext } from 'aws-amplify'
+import Amplify, { AuthModeStrategyType, API, Auth, withSSRContext } from 'aws-amplify';
 import Head from 'next/head'
 import awsExports from '../aws-exports'
 import { createTodo } from '../graphql/mutations'
@@ -21,7 +21,13 @@ import {
 } from "../models";
 
 
-Amplify.configure({ ...awsExports, ssr: true })
+// Amplify.configure({ ...awsExports, ssr: true })
+Amplify.configure({
+  ...awsExports,
+  DataStore: {
+    authModeStrategyType: AuthModeStrategyType.MULTI_AUTH
+  }
+})
 
 export default function Home({ todos = [] }: { todos: Todo[] }) {
   const router = useRouter()
