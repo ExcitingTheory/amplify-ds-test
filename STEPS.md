@@ -177,7 +177,7 @@ Make some todos from the web page
 
 Attempt to delete said todos from webpage
 
-See Reworked index and todo pages:
+See Reworked index and todo pages in this repo:
 
 ```bash
 amplify-ds-test/src/pages/index.tsx
