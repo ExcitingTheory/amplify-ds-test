@@ -1,10 +1,5 @@
 # Datastore + Nextjs
 
-## Example repo
-
-Complete example here: 
-
-
 ## Steps to reproduce
 
 Full stps to reproduce.
@@ -173,10 +168,14 @@ npx npm-check-updates -i '/@?aws-amplify/' && npm update
  ```
 
 Enable admin panel
+
 Generate some seed data
+
 Add a user via admin panel
+
 Make some todos from the web page
-Attempt to dele from webpage
+
+Attempt to delete from webpage
 
 Add to webbrowser console:
 
