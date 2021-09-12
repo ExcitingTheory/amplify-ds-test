@@ -175,7 +175,14 @@ Add a user via admin panel
 
 Make some todos from the web page
 
-Attempt to delete from webpage
+Attempt to delete said todos from webpage
+
+See Reworked index and todo pages:
+
+```bash
+amplify-ds-test/src/pages/index.tsx
+amplify-ds-test/src/pages/todo/[id].tsx
+```
 
 Add to webbrowser console:
 
